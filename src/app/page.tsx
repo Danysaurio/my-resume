@@ -4,26 +4,20 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-red">
-      <div className="container mx-auto">
-        <Header />
-        <Navbar />
-        <div className="grid grid-cols-2 bg-red-900">
-          <div>holis</div>
-          <div>
-
+    <div className="container mx-auto">
+      <div className="grid grid-cols-2 min-h-screen bg-red-900 items-center">
+        <div className="bg-orange-500 ">holis</div>
+        <div className="bg-blue-600">
           <Image
-              src="/dani.png"
-              alt="Next.js Logo"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: 'auto', height: '50px' }}
-            />
-          </div>
-          
+            src="/dani.png"
+            alt="Next.js Logo"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "auto", height: "50px" }}
+          />
         </div>
       </div>
-    </main>
+    </div>
   );
 }
