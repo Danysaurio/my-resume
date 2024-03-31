@@ -22,6 +22,10 @@
 
 @layer base {
   .page {
-    @apply w-full h-screen overflow-hidden;
+    background-color: #002345;
   }
+}
+
+.kaushan {
+  font-family: var(--font-kaushan);
 }
