@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ReactTyped } from "react-typed";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
@@ -16,14 +17,20 @@ const Banner = (): JSX.Element => {
     styles.title,
   ]);
 
-  const subTitleCls = classNames(["kaushan text-3xl", styles.subTitle]);
+  const subTitleCls = classNames(["kaushan text-3xl"]);
 
   return (
-    <section className={cls}>
-      <div className="text-center">
+    <section id="home" className={cls}>
+      <Image
+        className={styles.image}
+        src="/pinos.svg"
+        alt="pinos"
+        layout="fill"
+      />
+      <div className="text-center pb-20">
         <h1 className={titleCls}>Daniel Zavala</h1>
         <h2 className={subTitleCls}>
-          I'm&nbsp;
+          I&apos;m&nbsp;
           <b className={styles.subTitleBold}>
             <ReactTyped
               backSpeed={80}

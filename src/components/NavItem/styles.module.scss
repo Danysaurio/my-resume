@@ -1,0 +1,22 @@
+.item {
+    position: relative;
+    &:hover {
+        background-color: rgba($color: #000000, $alpha: .3);
+        & :global(.title) {
+            display: block;
+        }
+    }
+    
+}
+
+.title {
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 6px;
+    display: block;
+
+    padding: 4px 15px;
+    border-radius: 10px;
+    display: none;
+}

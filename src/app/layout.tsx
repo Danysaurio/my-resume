@@ -1,9 +1,9 @@
 import "./globals.css";
+import "animate.css";
 
 import { Kaushan_Script, Montserrat } from "next/font/google";
 
 import Header from "@/components/Header";
-import Image from "next/image";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import classNames from "classnames";

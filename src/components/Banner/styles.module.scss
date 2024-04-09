@@ -1,18 +1,17 @@
 .banner {
-    background-image: url('/banner.jpg');
-    max-height: 1030px;
+    background-image: url('/bg.svg');
+    background-position-y: bottom;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.title {
- 
-}
-
-
-.subTitle {
-    
+    position: relative;
 }
 
 .subTitleBold {
     color: #FFF170;
+}
+
+.image {
+    position: absolute;
+    bottom: 0 !important;
+    height: auto !important; 
+    top: auto !important;
 }

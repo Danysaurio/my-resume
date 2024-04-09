@@ -1,11 +1,16 @@
+import About from "@/components/sections/About";
 import Banner from "@/components/Banner/Banner";
-import Image from "next/image";
+import Services from "@/components/sections/Services";
+import Skills from "@/components/sections/Skills";
+// import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
       <Banner />
-      hola danielo
-   </div>
+      <About id="about"/>
+      <Services id="services"/>
+      <Skills id="skills" />
+    </div>
   );
 }
