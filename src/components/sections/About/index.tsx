@@ -1,21 +1,21 @@
-import Image from 'next/image';
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 interface AboutProps {
-  id: string
+  id: string;
 }
 
-const About = ({id}: AboutProps): JSX.Element => {
+const About = ({ id }: AboutProps): JSX.Element => {
   return (
     <section id={id} className="flex items-center">
       <div className="container mx-auto">
         <div className="grid grid-cols-5 gap-4">
           <div className="col-span-3 h-screen flex items-center">
             <div>
-              <h2 className="kaushan text-5xl mb-4">
+              <h2 className="kaushan text-5xl mb-9">
                 Hey, I&apos;m Daniel Zavala
               </h2>
-              <p className="pr-5">
+              <p className="pr-5 ">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
                 rerum distinctio sequi exercitationem, repudiandae nobis dolore,
                 non et deleniti laudantium perferendis debitis? Beatae,
@@ -46,6 +46,6 @@ const About = ({id}: AboutProps): JSX.Element => {
       </div>
     </section>
   );
-}
+};
 
 export default About;

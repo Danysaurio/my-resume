@@ -29,3 +29,16 @@
 .kaushan {
   font-family: var(--font-kaushan);
 }
+
+.page {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & > section {
+    /* scroll-snap-align: start; */
+
+  }
+}

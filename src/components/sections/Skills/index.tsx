@@ -1,65 +1,65 @@
-import { DiIllustrator, DiPhotoshop, DiTerminal } from "react-icons/di";
-import { FaFigma, FaInvision, FaSketch } from "react-icons/fa";
-import { SiAdobelightroom, SiAdobepremierepro } from "react-icons/si";
-
 import { BsPaintBucket } from "react-icons/bs";
-import Image from "next/image";
-import { ProgressBar } from "@/components/Utils";
+import { FaCode } from "react-icons/fa";
+import { LiaToolsSolid } from "react-icons/lia";
 
-const RenderSkill = (): JSX.Element => {
-  return (
-    <div className="grid grid-cols-5 mb-2">
-      <div className="col-span-3 flex">Typescript</div>
-      <div className="col-span-2 flex items-center">
-        <ProgressBar progress={50} />
-      </div>
-    </div>
-  );
-};
+import Image from "next/image";
+
+import { designSkills, devSkills, tools } from "./allSkills";
+import { DesignSkill, DevSkill, ToolItem } from "./utils";
 
 const Skills = ({ id }: { id: string }): JSX.Element => {
   return (
     <section id={id} className="flex items-center">
       <div className="container mx-auto">
         <div className="grid grid-cols-5 gap-4">
-          <div className="col-span-3 h-screen flex items-center">
+          <div className="col-span-3 h-screen flex items-center lg:min-h-[700px]">
             <div className="w-full">
-              <h2 className="kaushan text-5xl mb-4">Skills</h2>
+              <h2 className="kaushan text-5xl mb-6">Skills</h2>
               <div className="grid grid-cols-6 gap-10">
                 <div className="col-span-3">
-                  <div className="flex items-center">
-                    <DiTerminal size={"3rem"} />
-                    <h3 className="text-xl font-bold">Web Development</h3>
-                  </div>
-                  <div className="pl-[51px]">
-                    <RenderSkill />
-                    <RenderSkill />
-                    <RenderSkill />
-                    <RenderSkill />
-                    <RenderSkill />
-                    <RenderSkill />
-                    <RenderSkill />
-                    <RenderSkill />
-                    <RenderSkill />
-                    <RenderSkill />
-                    <RenderSkill />
-                    <RenderSkill />
-                  </div>
+                  <section>
+                    <div className="flex items-center mb-4">
+                      <FaCode size={"3rem"} className="pr-3 opacity-40" />
+                      <h3 className="text-xl font-bold">Web Development</h3>
+                    </div>
+                    <div className="pl-[51px]">
+                      {devSkills.map((skill, i) => (
+                        <DevSkill key={"skill" + i} {...skill} />
+                      ))}
+                    </div>
+                  </section>
                 </div>
                 <div className="col-span-3">
-                  <div className="flex items-center">
-                    <BsPaintBucket size={"3rem"} />
-                    <h3 className="text-xl font-bold">Design</h3>
-                  </div>
-                  <div className="flex text-5xl pl-[50px]">
-                    <DiPhotoshop />
-                    <DiIllustrator />
-                    <FaFigma className="p-1" title="Hola "/>
-                    <FaInvision className="p-1" />
-                    <SiAdobelightroom className="p-1" />
-                    <SiAdobepremierepro className="p-1" />
-                  </div>
+                  <section>
+                    <div className="header flex items-center mb-4">
+                      <BsPaintBucket
+                        size={"3rem"}
+                        className="pr-1 opacity-40"
+                      />
+                      <h3 className="text-xl font-bold">Design</h3>
+                    </div>
+                    <ul className="flex text-4xl pl-[50px]">
+                      {designSkills.map((skill, i) => (
+                        <DesignSkill key={"skill" + i} {...skill} />
+                      ))}
+                    </ul>
+                  </section>
+                  <section>
+                    <div className="flex items-center pt-5">
+                      <LiaToolsSolid
+                        size={"3rem"}
+                        className="pr-1 opacity-40"
+                      />
+                      <h3 className="text-xl font-bold">Tools</h3>
+                    </div>
+                    <ul className="pl-[50px]">
+                      {tools.map((tool, i) => (
+                        <ToolItem key={"tool" + i} title={tool} />
+                      ))}
+                    </ul>
+                  </section>
                 </div>
+                {/* col-span-3 end*/}
               </div>
             </div>
           </div>

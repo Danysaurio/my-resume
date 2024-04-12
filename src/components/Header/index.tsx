@@ -2,7 +2,7 @@ import {
   AiFillInstagram,
   AiFillLinkedin,
   AiFillYoutube,
-  AiOutlineGithub
+  AiOutlineGithub,
 } from "react-icons/ai";
 
 import { IconType } from "react-icons";
@@ -48,11 +48,7 @@ const RenderItem = ({
   icon: Icon,
   hoverClass,
 }: Item): JSX.Element => {
-  
-  const cls = classNames([
-    "p-1 block",
-    hoverClass,
-  ]);
+  const cls = classNames(["p-1 block", hoverClass]);
 
   return (
     <li>
@@ -65,10 +61,10 @@ const RenderItem = ({
 
 const Header = (): JSX.Element => {
   return (
-    <div className="flex justify-end pr-3 ">
+    <div className="flex justify-end pr-3 w-full  z-50 bg-[#002345] shadow-md">
       <ul className="flex">
         {elements.map((el, i) => (
-          <RenderItem key={'item'+i} {...el} />
+          <RenderItem key={"item" + i} {...el} />
         ))}
       </ul>
     </div>

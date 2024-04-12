@@ -1,0 +1,56 @@
+
+.robotImage {
+    height: auto !important;
+}
+
+.circleItem {
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        background-color: #3b82f6;
+        height: calc(100% - 44px);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.textContainer {
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-right: 10px solid rgb(71 85 105 / 0.55);
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+        right: 100%;
+        top: 10px;
+        position: absolute;
+    }
+}
+
+.timeline {
+    & :global(.timelineItem:last-child .icontimeline) {
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 7px solid #3b82f6;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.timelineItemDate {
+    position: absolute;
+    bottom: 100%;
+    opacity: .40;
+}
