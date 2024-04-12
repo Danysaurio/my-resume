@@ -1,4 +1,4 @@
-import { FaAndroid, FaEnvelope, FaHeading, FaUser } from "react-icons/fa";
+import { FaEnvelope, FaHeading, FaUser } from "react-icons/fa";
 
 const ContactForm = () => {
   return (
