@@ -64,7 +64,7 @@ const Skills = ({ id }: { id: string }): JSX.Element => {
             </div>
           </div>
           <div className="col-span-2 relative">
-            <Image src="/r-3s.svg" alt="Robot-1" layout="fill" />
+            <Image src="/r-3s.svg" alt="Robot-1" fill />
           </div>
         </div>
       </div>

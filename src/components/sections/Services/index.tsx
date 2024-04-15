@@ -23,7 +23,7 @@ const Services = ({ id }: ServicesProps): JSX.Element => {
             </div>
           </div>
           <div className="col-span-2 relative">
-            <Image src="/r-2s.svg" alt="pinos" layout="fill" />
+            <Image src="/r-2s.svg" alt="pinos" fill />
           </div>
         </div>
       </div>

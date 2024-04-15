@@ -41,7 +41,7 @@ const TimelineItem = ({
             <span className={styles.timelineItemDate}>{date}</span>
             <h3 className="text-2xl kaushan text-blue-500 ">{title}</h3>
             <span className="font-semibold">{position}</span>
-            <p className="mt-2 text-sm">{text}</p>
+            <p className="mt-2">{text}</p>
           </div>
         </div>
       </section>

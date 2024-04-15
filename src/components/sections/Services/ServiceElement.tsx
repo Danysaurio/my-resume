@@ -25,7 +25,7 @@ const ServiceElement = ({
         />
         <h3 className="text-xl font-bold">{title}</h3>
       </div>
-      <p className="text-sm">{text}</p>
+      <p>{text}</p>
     </div>
   );
 };

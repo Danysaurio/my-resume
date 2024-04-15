@@ -43,7 +43,7 @@ const About = ({ id }: AboutProps): JSX.Element => {
             </div>
           </div>
           <div className="col-span-2 relative">
-            <Image src="/r-1s.svg" alt="Robot-1" layout="fill" />
+            <Image src="/r-1s.svg" alt="Robot-1" fill />
           </div>
         </div>
       </div>

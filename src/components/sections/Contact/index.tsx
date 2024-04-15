@@ -1,5 +1,17 @@
 import Image from "next/image";
-import ContactForm from "./ContactForm";
+// import ContactForm from "./ContactForm";
+import { socialMedia, socialMediaItem } from "../Skills/utils";
+
+const MediaItem = ({ title, url, icon: Icon }: socialMediaItem) => {
+  return (
+    <li className="pb-2">
+      <a className="flex items-center" href={url} target="blank" title={title}>
+        <Icon className="mr-3 opacity-70" size={25} />
+        <span className="text-lg font-bold hover:text-blue-500">{title}</span>
+      </a>
+    </li>
+  );
+};
 
 const Contact = ({ id }: { id: string }) => {
   return (
@@ -10,16 +22,22 @@ const Contact = ({ id }: { id: string }) => {
             <div>
               <h2 className="kaushan text-5xl mb-9">Contact</h2>
               <p className="pr-5 ">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
-                rerum distinctio sequi exercitationem, repudiandae nobis dolore,
+                For now, I&apos;m still working on adding more features to this
+                page. One of those is incorporating a contact form. However, you
+                can reach me through my social media profiles:
               </p>
               <div>
-                <ContactForm />
+                <ul className="pt-6 pl-10">
+                  {socialMedia.map((item, i) => (
+                    <MediaItem key={`socialItem-${i}`} {...item} />
+                  ))}
+                </ul>
+                {/* <ContactForm /> */}
               </div>
             </div>
           </div>
           <div className="col-span-2 relative">
-            <Image src="/r-1s.svg" alt="Robot-1" layout="fill" />
+            <Image src="/r-1s.svg" alt="Robot-1" fill />
           </div>
         </div>
       </div>
