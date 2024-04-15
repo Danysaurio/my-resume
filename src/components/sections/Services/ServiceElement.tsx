@@ -17,19 +17,15 @@ const ServiceElement = ({
     <div className="col-span-1">
       <div className="flex items-center mb-3">
         <Image
-          className="mr-2"
-          src="/icons/icon-1.svg"
-          alt="Web dev icon"
+          className="mr-2 opacity-50"
+          src={imgUrl}
+          alt={imgAlt}
           width={30}
           height={30}
         />
-        <h3 className="text-xl font-bold">Web Development</h3>
+        <h3 className="text-xl font-bold">{title}</h3>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores autem
-        ad officia eos veniam. Quam ipsa quas iste autem dolorum itaque!
-        Assumenda illum non enim placeat repellat incidunt quas ex.
-      </p>
+      <p className="text-sm">{text}</p>
     </div>
   );
 };

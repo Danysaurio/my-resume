@@ -15,10 +15,12 @@ const Experience = ({ id }: { id: string }): JSX.Element => {
               <section className="mb-16">
                 <h2 className="kaushan text-5xl mb-9">Experience</h2>
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Natus molestias maxime distinctio eligendi qui sunt,
-                  doloremque repellat pariatur et quibusdam minima ipsa
-                  dignissimos deleniti ratione non nesciunt at impedit quis.
+                  In my journey through various roles and educational endeavors,
+                  I blend technical prowess with creative vision to drive
+                  innovative projects forward. With a focus on excellence, each
+                  experience has shaped my approach to surpassing boundaries and
+                  creating impactful solutions. This timeline reflects my path
+                  toward professional success and personal growth.
                 </p>
               </section>
               <section className="timeline ml-20">

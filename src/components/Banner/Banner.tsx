@@ -5,7 +5,7 @@ import { ReactTyped } from "react-typed";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
 
-const textLines = [`Developer`, `Designer`];
+const textLines = ["Developer", "Designer", "Front end", "UX/UI"];
 
 const Banner = (): JSX.Element => {
   const cls = classNames([

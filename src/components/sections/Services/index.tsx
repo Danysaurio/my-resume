@@ -1,37 +1,11 @@
-import ServiceElement, { ServiceItem } from "./ServiceElement";
+import ServiceElement from "./ServiceElement";
 
 import Image from "next/image";
+import { servicesElements } from "./Values";
 
 interface ServicesProps {
   id: string;
 }
-
-const servicesElements: ServiceItem[] = [
-  {
-    imgUrl: "/icons/icon-1.svg",
-    imgAlt: "Web dev icon",
-    title: "What I do",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores autem ad officia eos veniam. Quam ipsa quas iste autem dolorum itaque! Assumenda illum non enim placeatrepellat incidunt quas ex.",
-  },
-  {
-    imgUrl: "/icons/icon-1.svg",
-    imgAlt: "Web dev icon",
-    title: "What I do",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores autem ad officia eos veniam. Quam ipsa quas iste autem dolorum itaque! Assumenda illum non enim placeatrepellat incidunt quas ex.",
-  },
-  {
-    imgUrl: "/icons/icon-1.svg",
-    imgAlt: "Web dev icon",
-    title: "What I do",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores autem ad officia eos veniam. Quam ipsa quas iste autem dolorum itaque! Assumenda illum non enim placeatrepellat incidunt quas ex.",
-  },
-  {
-    imgUrl: "/icons/icon-1.svg",
-    imgAlt: "Web dev icon",
-    title: "What I do",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores autem ad officia eos veniam. Quam ipsa quas iste autem dolorum itaque! Assumenda illum non enim placeatrepellat incidunt quas ex.",
-  },
-];
 
 const Services = ({ id }: ServicesProps): JSX.Element => {
   return (
@@ -43,7 +17,7 @@ const Services = ({ id }: ServicesProps): JSX.Element => {
               <h2 className="kaushan text-5xl mb-9">What I do</h2>
               <div className="grid grid-cols-2 gap-8">
                 {servicesElements.map((el, i) => (
-                  <ServiceElement key={'sItem-' + i} {...el} />
+                  <ServiceElement key={"sItem-" + i} {...el} />
                 ))}
               </div>
             </div>
