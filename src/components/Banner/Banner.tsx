@@ -21,12 +21,7 @@ const Banner = (): JSX.Element => {
 
   return (
     <section id="home" className={cls}>
-      <Image
-        className={styles.image}
-        src="/pinos.svg"
-        alt="pinos"
-        layout="fill"
-      />
+      <Image className={styles.image} src="/pinos.svg" alt="pinos" fill />
       <div className="text-center pb-20">
         <h1 className={titleCls}>Daniel Zavala</h1>
         <h2 className={subTitleCls}>

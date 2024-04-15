@@ -1,5 +1,11 @@
 import { ProgressBar } from "@/components/Utils";
 import { IconType } from "react-icons";
+import {
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiFillYoutube,
+  AiOutlineGithub,
+} from "react-icons/ai";
 import { BsCheck } from "react-icons/bs";
 import { FaHtml5 } from "react-icons/fa";
 
@@ -67,4 +73,38 @@ const DesignSkill = ({
   );
 };
 
-export { DesignSkill, DevSkill, ToolItem };
+export interface socialMediaItem {
+  url: string;
+  title: string;
+  icon: IconType;
+  hoverClass?: string;
+}
+
+const socialMedia = [
+  {
+    url: "https://www.youtube.com/channel/UC4CPgJp5YB3g0HdQdG8MnDQ",
+    title: "Youtube",
+    icon: AiFillYoutube,
+    hoverClass: "hover:text-[#FF0000]",
+  },
+  {
+    url: "https://www.instagram.com/eldanysaurio/",
+    title: "Instagram",
+    icon: AiFillInstagram,
+    hoverClass: "hover:text-[#D43089]",
+  },
+  {
+    url: "https://github.com/Danysaurio",
+    title: "Github",
+    icon: AiOutlineGithub,
+    hoverClass: "hover:text-[#8264ff]",
+  },
+  {
+    url: "https://www.linkedin.com/in/danizavala",
+    title: "Linkedin",
+    icon: AiFillLinkedin,
+    hoverClass: "hover:text-[#0073b1]",
+  },
+];
+
+export { DesignSkill, DevSkill, ToolItem, socialMedia };

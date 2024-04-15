@@ -1,5 +1,4 @@
 import "./globals.css";
-import "animate.css";
 
 import { Kaushan_Script, Montserrat } from "next/font/google";
 
@@ -34,9 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cls}>
-        <main
-          className={"page text-white"}
-        >
+        <main className={"page text-white"}>
           <Header />
           <Navbar />
           {children}
