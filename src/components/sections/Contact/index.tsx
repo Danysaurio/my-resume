@@ -37,7 +37,7 @@ const Contact = ({ id }: { id: string }) => {
             </div>
           </div>
           <div className="col-span-2 relative">
-            <Image src="/r-1s.svg" alt="Robot-1" fill />
+            <Image src="/r-6.svg" alt="Robot-1" fill />
           </div>
         </div>
       </div>

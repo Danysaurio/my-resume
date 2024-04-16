@@ -29,7 +29,13 @@ const Experience = ({ id }: { id: string }): JSX.Element => {
             </div>
           </div>
           <div className="col-span-2 relative">
-            <Image src="/r-2s.svg" alt="pinos" fill className={robotClasses} />
+            <object
+              type="image/svg+xml"
+              data="/r-5a.svg"
+              className="sticky top-0"
+            >
+              svg-animation
+            </object>
           </div>
         </div>
       </div>
