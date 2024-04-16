@@ -1,6 +1,5 @@
 import ServiceElement from "./ServiceElement";
 
-import Image from "next/image";
 import { servicesElements } from "./Values";
 
 interface ServicesProps {
@@ -9,7 +8,7 @@ interface ServicesProps {
 
 const Services = ({ id }: ServicesProps): JSX.Element => {
   return (
-    <section id={id} className="flex items-center">
+    <section id={id} className="flex items-center bg-[#001c39]">
       <div className="container mx-auto">
         <div className="grid grid-cols-5 gap-4">
           <div className="col-span-3 h-screen flex items-center">
@@ -22,11 +21,12 @@ const Services = ({ id }: ServicesProps): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 relative">
-            {/* <Image src="/r-2as.svg" alt="pinos" layout="fill" /> */}
-            <object type="image/svg+xml" data="/r-2as.svg">
-              svg-animation
-            </object>
+          <div className="col-span-2 relative flex items-center">
+            <div className="min-w-full">
+              <object type="image/svg+xml" data="/r-2as.svg">
+                svg-animation
+              </object>
+            </div>
           </div>
         </div>
       </div>

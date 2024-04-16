@@ -2,14 +2,13 @@ import { BsPaintBucket } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
 import { LiaToolsSolid } from "react-icons/lia";
 
-import Image from "next/image";
-
 import { designSkills, devSkills, tools } from "./allSkills";
 import { DesignSkill, DevSkill, ToolItem } from "./utils";
+import classNames from "classnames";
 
 const Skills = ({ id }: { id: string }): JSX.Element => {
   return (
-    <section id={id} className="flex items-center">
+    <section id={id} className="flex items-center bg-[#00000021]">
       <div className="container mx-auto">
         <div className="grid grid-cols-5 gap-4">
           <div className="col-span-3 h-screen flex items-center lg:min-h-[700px]">
@@ -63,10 +62,16 @@ const Skills = ({ id }: { id: string }): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 relative">
-            <object type="image/svg+xml" data="r-4-A.svg">
-              svg-animation
-            </object>
+          <div className="col-span-2 relative flex items-center">
+            <div className="flex justify-center w-full">
+              <object
+                type="image/svg+xml"
+                data="r-4-A.svg"
+                className="max-h-[900px]"
+              >
+                svg-animation
+              </object>
+            </div>
           </div>
         </div>
       </div>

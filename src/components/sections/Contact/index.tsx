@@ -15,7 +15,7 @@ const MediaItem = ({ title, url, icon: Icon }: socialMediaItem) => {
 
 const Contact = ({ id }: { id: string }) => {
   return (
-    <section id={id} className="flex items-center">
+    <section id={id} className="flex items-center bg-[#001d55]">
       <div className="container mx-auto">
         <div className="grid grid-cols-5 gap-4">
           <div className="col-span-3 h-screen flex items-center">

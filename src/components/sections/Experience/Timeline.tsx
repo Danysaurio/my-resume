@@ -5,11 +5,16 @@ import { timelineItems } from "./Values";
 
 const Timeline = (): JSX.Element => {
   return (
-    <ul className={styles.timeline}>
-      {timelineItems.map((item, i) => (
-        <TimelineItem key={`timelineItem-${i}`} {...item} />
-      ))}
-    </ul>
+    <>
+      <ul className={styles.timeline}>
+        {timelineItems.map((item, i) => (
+          <TimelineItem key={`timelineItem-${i}`} {...item} />
+        ))}
+      </ul>
+      <div className="mt-4">
+        <span className="text-blue-500">...To be continued</span>
+      </div>
+    </>
   );
 };
 

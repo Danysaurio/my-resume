@@ -1,13 +1,8 @@
-import styles from "./styles.module.scss";
-
-import Image from "next/image";
 import Timeline from "./Timeline";
-import classNames from "classnames";
 
 const Experience = ({ id }: { id: string }): JSX.Element => {
-  const robotClasses = classNames(["!sticky", styles.robotImage]);
   return (
-    <section id={id} className="flex items-center">
+    <section id={id} className="flex items-center py-36">
       <div className="container mx-auto">
         <div className="grid grid-cols-5 gap-4">
           <div className="col-span-3">
@@ -32,7 +27,7 @@ const Experience = ({ id }: { id: string }): JSX.Element => {
             <object
               type="image/svg+xml"
               data="/r-5a.svg"
-              className="sticky top-0"
+              className="sticky top-10 max-h-[700px]"
             >
               svg-animation
             </object>
