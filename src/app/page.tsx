@@ -13,7 +13,7 @@ export default function Home() {
       <About id="about" />
       <Services id="services" />
       <Skills id="skills" />
-      <Experience id={"experience"} />
+      <Experience id="experience" />
       <Contact id="contact" />
       <Footer />
     </>

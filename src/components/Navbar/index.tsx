@@ -22,23 +22,22 @@ interface NavItem {
 // nav data
 export const navData: NavItem[] = [
   { name: "home", path: "#home", IconComponent: HiHome },
-  { name: "about", path: "/about", IconComponent: HiUser },
-  { name: "services", path: "/services", IconComponent: HiRectangleGroup },
-  { name: "work", path: "/work", IconComponent: HiViewColumns },
+  { name: "about", path: "#about", IconComponent: HiUser },
+  { name: "What I do", path: "#services", IconComponent: HiRectangleGroup },
+  { name: "Skills", path: "#skills", IconComponent: HiViewColumns },
   {
-    name: "testimonials",
-    path: "/testimonials",
+    name: "Experience",
+    path: "#experience",
     IconComponent: HiChatBubbleBottomCenterText,
   },
   {
-    name: "contact",
-    path: "/contact",
+    name: "Contact",
+    path: "#contact",
     IconComponent: HiEnvelope,
   },
 ];
 
 const Navbar = (): JSX.Element => {
-
   const cls = classNames([
     "flex w-full xl:flex-col items-center justify-between xl:justify-center",
     styles.nav,

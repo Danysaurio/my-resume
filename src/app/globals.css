@@ -30,15 +30,12 @@
   font-family: var(--font-kaushan);
 }
 
+
 .page {
-  scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  scroll-behavior: smooth;
   &::-webkit-scrollbar {
-    display: none;
-  }
-  & > section {
-    /* scroll-snap-align: start; */
-
-  }
+      display: none;
+    }
 }
