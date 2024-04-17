@@ -64,7 +64,7 @@ export default function RootLayout({
     <html lang="en">
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={cls}>
-        <main className={"page text-white"}>
+        <main className={"page text-white md:h-screen h-[100dvh]"}>
           {/* <div className="p-10 fixed z-50 w-full bg-amber-300 sm:bg-red-500 md:bg-blue-800 lg:bg-green-400"></div> */}
           <Header />
           <ResponsiveNav className="md:hidden" />

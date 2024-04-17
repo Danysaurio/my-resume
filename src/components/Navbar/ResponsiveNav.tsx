@@ -30,7 +30,7 @@ export const ResponsiveNav = ({ className }: { className?: string }) => {
   const showClasses = showMenu ? "left-[30vw]" : "left-full";
 
   const containerCls = classNames([
-    "bg-[#002345] transition-all absolute fixed z-10 ",
+    "bg-[#002345] transition-all fixed z-10 ",
     showClasses,
   ]);
 
@@ -51,7 +51,7 @@ export const ResponsiveNav = ({ className }: { className?: string }) => {
           {showMenu ? <IoClose size={25} /> : <IoMdMenu size={25} />}
         </button>
 
-        <div className="w-[70vw] h-screen ">
+        <div className="w-[70vw] h-[100dvh] ">
           <ul className="text-center pt-10">
             {navData.map((el, i) => (
               <MobileNavItem key={"nav" + i} onClick={handleOnClick} {...el} />
