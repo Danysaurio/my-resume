@@ -1,11 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { ReactTyped } from "react-typed";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
-
-const textLines = ["Developer", "Designer", "Front end", "UX/UI"];
+import Typing from "./Typing";
 
 const Banner = (): JSX.Element => {
   const cls = classNames([
@@ -13,11 +9,11 @@ const Banner = (): JSX.Element => {
     styles.banner,
   ]);
   const titleCls = classNames([
-    "font-bold uppercase text-7xl text-shadow",
+    "font-bold uppercase xl:text-7xl md:text-5xl sm:text-4xl text-3xl text-shadow",
     styles.title,
   ]);
 
-  const subTitleCls = classNames(["kaushan text-3xl"]);
+  const subTitleCls = classNames(["kaushan text-3xl text-xl sm:text-2xl"]);
 
   return (
     <section id="home" className={cls}>
@@ -27,12 +23,7 @@ const Banner = (): JSX.Element => {
         <h2 className={subTitleCls}>
           I&apos;m&nbsp;
           <b className={styles.subTitleBold}>
-            <ReactTyped
-              backSpeed={80}
-              loop
-              strings={textLines}
-              typeSpeed={80}
-            />
+            <Typing />
           </b>
         </h2>
       </div>

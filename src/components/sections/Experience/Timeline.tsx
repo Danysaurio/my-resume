@@ -11,7 +11,7 @@ const Timeline = (): JSX.Element => {
           <TimelineItem key={`timelineItem-${i}`} {...item} />
         ))}
       </ul>
-      <div className="mt-4">
+      <div className="mt-4 sm:block hidden">
         <span className="text-blue-500">...To be continued</span>
       </div>
     </>

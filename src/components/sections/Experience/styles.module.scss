@@ -17,6 +17,7 @@
 }
 
 .textContainer {
+    background-color: rgb(71 85 105 / 0.55);
     &::after {
         content: '';
         display: block;

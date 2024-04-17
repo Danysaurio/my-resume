@@ -39,7 +39,7 @@ export const navData: NavItem[] = [
 
 const Navbar = (): JSX.Element => {
   const cls = classNames([
-    "flex w-full xl:flex-col items-center justify-between xl:justify-center",
+    "md:flex w-full flex-col items-center justify-between xl:justify-center hidden",
     styles.nav,
   ]);
   return (
@@ -48,7 +48,12 @@ const Navbar = (): JSX.Element => {
       <div className={cls}>
         {navData.map(({ name, path, IconComponent }, index) => {
           return (
-            <NavItem key={name} name={name} path={path} icon={IconComponent} />
+            <NavItem
+              key={name + index}
+              name={name}
+              path={path}
+              icon={IconComponent}
+            />
           );
         })}
       </div>

@@ -24,19 +24,19 @@ const TimelineItem = ({
   ]);
 
   const clsTextContainer = classNames([
-    "bg-slate-600/55 rounded-lg p-4 shadow-md relative",
+    "rounded-lg p-4 shadow-md relative",
     styles.textContainer,
   ]);
 
   return (
     <div className="flex timelineItem">
-      <div className="relative">
+      <div className="relative hidden sm:block">
         <div className={cls}>
           <Icon size={20} />
         </div>
       </div>
       <section>
-        <div className="pl-10 pb-16 pr-10">
+        <div className="pb-16  sm:pl-5 lg:pr-10 lg:pl-10">
           <div className={clsTextContainer}>
             <span className={styles.timelineItemDate}>{date}</span>
             <h3 className="text-2xl kaushan text-blue-500 ">{title}</h3>

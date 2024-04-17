@@ -7,12 +7,12 @@ interface AboutProps {
 
 const About = ({ id }: AboutProps): JSX.Element => {
   return (
-    <section id={id} className="flex items-center">
+    <section id={id} className="flex items-center py-20 sm:py-10">
       <div className="container mx-auto">
-        <div className="grid grid-cols-5 gap-4">
-          <div className="col-span-3 h-screen flex items-center">
-            <div className="pr-8">
-              <h2 className="kaushan text-5xl mb-3">
+        <div className="grid grid-cols-5 md:gap-4 gap-0">
+          <div className="md:col-span-3 col-span-5 text-center lg:h-screen md:h-auto flex sm:items-center md:text-left">
+            <div className="md:pr-8 sm:p-0 p-5">
+              <h2 className="kaushan lg:text-5xl md:text-4xl text-3xl mb-3">
                 Hey, I&apos;m Daniel Zavala
               </h2>
               <p className="pb-8 pt-2">
@@ -42,8 +42,16 @@ const About = ({ id }: AboutProps): JSX.Element => {
               </p>
             </div>
           </div>
-          <div className="col-span-2 relative">
-            <Image src="/r-1s.svg" alt="Robot-1" fill />
+          <div className="md:col-span-2 sm:col-span-5 sm:mt-10 relative sm:flex items-center hidden">
+            <div className="w-full flex justify-center">
+              <object
+                type="image/svg+xml"
+                data="/r-1s.svg"
+                className="md:max-h-[550px] sm:max-h-[350px]"
+              >
+                Robot sketch
+              </object>
+            </div>
           </div>
         </div>
       </div>

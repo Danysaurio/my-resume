@@ -15,7 +15,7 @@ const ServiceElement = ({
 }: ServiceItem): JSX.Element => {
   return (
     <div className="col-span-1">
-      <div className="flex items-center mb-3">
+      <div className="flex items-center mb-3 justify-center md:justify-start">
         <Image
           className="mr-2 opacity-50"
           src={imgUrl}
@@ -23,7 +23,7 @@ const ServiceElement = ({
           width={30}
           height={30}
         />
-        <h3 className="text-xl font-bold">{title}</h3>
+        <h3 className="md:text-xl text-lg font-bold">{title}</h3>
       </div>
       <p>{text}</p>
     </div>

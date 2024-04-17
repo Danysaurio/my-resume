@@ -18,12 +18,12 @@ const NavItem = ({ name, path, icon: Icon }: NavItemProps): JSX.Element => {
   ]);
 
   return (
-    <a href={path} className={cls}>
+    <Link href={path} className={cls}>
       <div className="p-3">
         <Icon size={"1.2rem"} />
         <span className={titleClass}>{name}</span>
       </div>
-    </a>
+    </Link>
   );
 };
 
