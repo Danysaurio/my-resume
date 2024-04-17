@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import classNames from "classnames";
+import { ResponsiveNav } from "@/components/Navbar/ResponsiveNav";
 
 const inter = Montserrat({
   subsets: ["latin"],
@@ -64,7 +65,9 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={cls}>
         <main className={"page text-white"}>
+          {/* <div className="p-10 fixed z-50 w-full bg-amber-300 sm:bg-red-500 md:bg-blue-800 lg:bg-green-400"></div> */}
           <Header />
+          <ResponsiveNav className="md:hidden" />
           <Navbar />
           {children}
         </main>

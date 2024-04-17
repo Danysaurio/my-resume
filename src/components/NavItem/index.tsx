@@ -4,7 +4,7 @@ import React from "react";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
 
-interface NavItemProps {
+export interface NavItemProps {
   name: string;
   path: string;
   icon: IconType;

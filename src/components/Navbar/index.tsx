@@ -12,48 +12,50 @@ import { IconType } from "react-icons";
 import NavItem from "../NavItem";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
+import { IoMdMenu } from "react-icons/io";
+import { ResponsiveNav } from "./ResponsiveNav";
 
 interface NavItem {
   name: string;
   path: string;
-  IconComponent: IconType;
+  icon: IconType;
 }
 
 // nav data
 export const navData: NavItem[] = [
-  { name: "home", path: "#home", IconComponent: HiHome },
-  { name: "about", path: "#about", IconComponent: HiUser },
-  { name: "What I do", path: "#services", IconComponent: HiRectangleGroup },
-  { name: "Skills", path: "#skills", IconComponent: HiViewColumns },
+  { name: "home", path: "#home", icon: HiHome },
+  { name: "about", path: "#about", icon: HiUser },
+  { name: "What I do", path: "#services", icon: HiRectangleGroup },
+  { name: "Skills", path: "#skills", icon: HiViewColumns },
   {
     name: "Experience",
     path: "#experience",
-    IconComponent: HiChatBubbleBottomCenterText,
+    icon: HiChatBubbleBottomCenterText,
   },
   {
     name: "Contact",
     path: "#contact",
-    IconComponent: HiEnvelope,
+    icon: HiEnvelope,
   },
 ];
 
-const Navbar = (): JSX.Element => {
+const Navbar = ({ className }: { className?: string }): JSX.Element => {
   const cls = classNames([
-    "md:flex w-full flex-col items-center justify-between xl:justify-center hidden",
+    "md:flex hidden w-full flex-col items-center justify-between xl:justify-center",
     styles.nav,
   ]);
+
+  const containerCls = classNames([
+    "fixed z-10 right-0 md:top-1/2 transform md:-translate-y-1/2",
+    className,
+  ]);
+
   return (
-    <nav className="fixed right-0 top-1/2 transform -translate-y-1/2 z-10">
-      {/* { inner } */}
+    <nav className={containerCls}>
       <div className={cls}>
-        {navData.map(({ name, path, IconComponent }, index) => {
+        {navData.map(({ name, path, icon }, index) => {
           return (
-            <NavItem
-              key={name + index}
-              name={name}
-              path={path}
-              icon={IconComponent}
-            />
+            <NavItem key={name + index} name={name} path={path} icon={icon} />
           );
         })}
       </div>

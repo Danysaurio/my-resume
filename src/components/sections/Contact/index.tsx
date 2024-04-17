@@ -1,4 +1,3 @@
-import Image from "next/image";
 // import ContactForm from "./ContactForm";
 import { socialMedia, socialMediaItem } from "../Skills/utils";
 
@@ -15,10 +14,7 @@ const MediaItem = ({ title, url, icon: Icon }: socialMediaItem) => {
 
 const Contact = ({ id }: { id: string }) => {
   return (
-    <section
-      id={id}
-      className="flex items-center bg-[#01102d33] py-10 bg-amber-300 sm:bg-red-500 md:bg-blue-800 lg:bg-green-400"
-    >
+    <section id={id} className="flex items-center bg-[#01102d33] py-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-5 gap-4 px-5 sm:px-0">
           <div className="col-span-5 md:col-span-3 lg:h-screen flex items-center">
@@ -41,12 +37,12 @@ const Contact = ({ id }: { id: string }) => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 relative sm:flex items-center hidden">
+          <div className="col-span-5 md:col-span-2 relative sm:flex items-center hidden">
             <div className="min-w-full flex justify-center">
               <object
                 type="image/svg+xml"
                 data="/r-6.svg"
-                className="max-h-[550px]"
+                className="md:max-h-[550px] sm:max-h-[350px]"
               >
                 Robot - Contact me now
               </object>

@@ -61,7 +61,10 @@ const RenderItem = ({
 
 const Header = (): JSX.Element => {
   return (
-    <div className="flex justify-end pr-3 w-full  z-50 bg-[#002345] shadow-md">
+    <div
+      className="md:flex hidden
+    justify-end pr-3 w-full  z-50 bg-[#002345] shadow-md"
+    >
       <ul className="flex">
         {elements.map((el, i) => (
           <RenderItem key={"item" + i} {...el} />

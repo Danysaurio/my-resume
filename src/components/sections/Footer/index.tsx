@@ -7,6 +7,7 @@ import {
 
 import { IconType } from "react-icons";
 import classNames from "classnames";
+import { socialMedia } from "../Skills/utils";
 
 interface Item {
   url: string;
@@ -14,33 +15,6 @@ interface Item {
   hoverClass: string;
   icon: IconType;
 }
-
-const elements = [
-  {
-    url: "https://www.youtube.com/channel/UC4CPgJp5YB3g0HdQdG8MnDQ",
-    title: "Youtube",
-    icon: AiFillYoutube,
-    hoverClass: "hover:text-[#FF0000]",
-  },
-  {
-    url: "https://www.instagram.com/eldanysaurio/",
-    title: "Instagram",
-    icon: AiFillInstagram,
-    hoverClass: "hover:text-[#D43089]",
-  },
-  {
-    url: "https://github.com/Danysaurio",
-    title: "Github",
-    icon: AiOutlineGithub,
-    hoverClass: "hover:text-[#8264ff]",
-  },
-  {
-    url: "https://www.linkedin.com/in/danizavala",
-    title: "Linkedin",
-    icon: AiFillLinkedin,
-    hoverClass: "hover:text-[#0073b1]",
-  },
-];
 
 const RenderItem = ({
   url,
@@ -63,7 +37,7 @@ const Footer = (): JSX.Element => {
   return (
     <div className="flex justify-center pr-3 w-full z-50 bg-blue-500 shadow-md">
       <ul className="flex">
-        {elements.map((el, i) => (
+        {socialMedia.map((el, i) => (
           <RenderItem key={"item" + i} {...el} />
         ))}
       </ul>
