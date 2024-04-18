@@ -23,7 +23,7 @@ const kaushan = Kaushan_Script({
 export const metadata: Metadata = {
   title: "Daniel Zavala - Resume",
   description:
-    "Discover a world of creativity and innovation with a seamless blend of design and development. Explore captivating user interfaces and cutting-edge solutions crafted by a skilled frontend developer. Connect with me to elevate your digital presence.",
+    "Experienced Front End Developer and Designer adept at crafting captivating and functional visual interfaces.",
   keywords:
     "Frontend development, UI design, UX optimization, web development, creative coding, user interface, responsive design, JavaScript, HTML, CSS, digital innovation.",
   icons: {
@@ -62,10 +62,20 @@ export default function RootLayout({
   const cls = classNames([inter.className, kaushan.variable]);
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <meta property="og:image" content="/og-reference.png" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1500" />
+      <meta property="og:image:height" content="624" />
+      <meta property="og:image:alt" content="Daniel Zavala - Resume" />
+
+      <meta property="twitter:image" content="/og-reference.png" />
+      <meta property="twitter:image:type" content="image/png" />
+      <meta property="twitter:image:width" content="1500" />
+      <meta property="twitter:image:height" content="624" />
+      <meta property="twitter:image:alt" content="Daniel Zavala - Resume" />
+
       <body className={cls}>
         <main className={"page text-white md:h-screen h-[100dvh]"}>
-          {/* <div className="p-10 fixed z-50 w-full bg-amber-300 sm:bg-red-500 md:bg-blue-800 lg:bg-green-400"></div> */}
           <Header />
           <ResponsiveNav className="md:hidden" />
           <Navbar />
