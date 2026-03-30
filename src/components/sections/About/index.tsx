@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 interface AboutProps {
   id: string;
@@ -7,7 +6,7 @@ interface AboutProps {
 
 const About = ({ id }: AboutProps): JSX.Element => {
   return (
-    <section id={id} className="flex items-center py-20 sm:py-10">
+    <section id={id} className="flex items-center py-10 sm:py-20">
       <div className="container mx-auto">
         <div className="grid grid-cols-5 md:gap-4 gap-0">
           <div className="md:col-span-3 col-span-5 text-center lg:h-screen md:h-auto flex sm:items-center md:text-left">
@@ -45,9 +44,10 @@ const About = ({ id }: AboutProps): JSX.Element => {
           <div className="md:col-span-2 sm:col-span-5 sm:mt-10 relative sm:flex items-center hidden">
             <div className="w-full flex justify-center">
               <object
+                aria-label="Robot - sketch"
                 type="image/svg+xml"
                 data="/r-1s.svg"
-                className="md:max-h-[550px] sm:max-h-[350px]"
+                className="md:max-h-[550px] sm:max-h-[350px] h-full w-full"
               >
                 Robot sketch
               </object>

@@ -29,7 +29,7 @@ const TimelineItem = ({
   ]);
 
   return (
-    <div className="flex timelineItem">
+    <li className="flex timelineItem">
       <div className="relative hidden sm:block">
         <div className={cls}>
           <Icon size={20} />
@@ -45,7 +45,7 @@ const TimelineItem = ({
           </div>
         </div>
       </section>
-    </div>
+    </li>
   );
 };
 

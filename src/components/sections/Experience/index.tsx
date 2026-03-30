@@ -8,7 +8,7 @@ const Experience = ({ id }: { id: string }): JSX.Element => {
           <div className="md:col-span-3 col-span-5">
             <div>
               <section className="mb-16 text-center md:text-left">
-                <h2 className="kaushan text-5xl mb-9">Experience</h2>
+                <h2 className="kaushan text-3xl md:text-5xl mb-9">Experience</h2>
                 <p>
                   In my journey through various roles and educational endeavors,
                   I blend technical prowess with creative vision to drive
@@ -25,6 +25,7 @@ const Experience = ({ id }: { id: string }): JSX.Element => {
           </div>
           <div className="md:col-span-2 col-span-5 relative hidden sm:flex md:block justify-center">
             <object
+              aria-label="Robot - waving"
               type="image/svg+xml"
               data="/r-5A.svg"
               className="sticky top-10 md:max-h-[550px] sm:max-h-[350px]"

@@ -21,6 +21,7 @@ const kaushan = Kaushan_Script({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://danizavala.com"),
   title: "Daniel Zavala - Resume",
   description:
     "Experienced Front End Developer and Designer adept at crafting captivating and functional visual interfaces.",
@@ -30,6 +31,10 @@ export const metadata: Metadata = {
     icon: [
       {
         url: "./favicon.ico",
+      },
+      {
+        url: "./favicon.ico",
+        rel: "maskable",
       },
       {
         url: "./favicon/apple-touch-icon.png",
@@ -46,11 +51,32 @@ export const metadata: Metadata = {
         rel: "icon",
         sizes: "16x16",
       },
+    ],
+  },
+  manifest: "./favicon/site.webmanifest",
+  openGraph: {
+    images: [
       {
-        url: "./favicon/site.webmanifest",
-        rel: "manifest",
+        url: "/og-reference.png",
+        width: 1500,
+        height: 624,
+        alt: "Daniel Zavala - Resume",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [
+      {
+        url: "/og-reference.png",
+        width: 1500,
+        height: 624,
+        alt: "Daniel Zavala - Resume",
+      },
+    ],
+  },
+  other: {
+    "theme-color": "#3b82f6",
   },
 };
 
@@ -62,18 +88,6 @@ export default function RootLayout({
   const cls = classNames([inter.className, kaushan.variable]);
   return (
     <html lang="en">
-      <meta property="og:image" content="/og-reference.png" />
-      <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="1500" />
-      <meta property="og:image:height" content="624" />
-      <meta property="og:image:alt" content="Daniel Zavala - Resume" />
-
-      <meta property="twitter:image" content="/og-reference.png" />
-      <meta property="twitter:image:type" content="image/png" />
-      <meta property="twitter:image:width" content="1500" />
-      <meta property="twitter:image:height" content="624" />
-      <meta property="twitter:image:alt" content="Daniel Zavala - Resume" />
-
       <body className={cls}>
         <main className={"page text-white md:h-screen h-[100dvh]"}>
           <Header />

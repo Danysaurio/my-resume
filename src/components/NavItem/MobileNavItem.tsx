@@ -1,4 +1,3 @@
-import React from "react";
 import { NavItemProps } from ".";
 import Link from "next/link";
 

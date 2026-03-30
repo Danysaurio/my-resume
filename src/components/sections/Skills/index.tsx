@@ -16,7 +16,7 @@ const Skills = ({ id }: { id: string }): JSX.Element => {
               <h2 className="kaushan lg:text-5xl md:text-5xl text-3xl mb-6 text-center md:text-left">
                 Skills
               </h2>
-              <div className="grid grid-cols-6 gap-10">
+              <div className="grid grid-cols-6 gap-4 sm:gap-10">
                 <div className="col-span-6 md:col-span-3">
                   <section className="sm:px-0 px-5">
                     <div className="flex items-center mb-4 justify-center sm:justify-start">
@@ -69,9 +69,10 @@ const Skills = ({ id }: { id: string }): JSX.Element => {
           <div className="md:col-span-2 col-span-5 relative sm:flex items-center hidden">
             <div className="flex justify-center w-full">
               <object
+                aria-label="Robot - animation"
                 type="image/svg+xml"
-                data="r-4-A.svg"
-                className="md:max-h-[650px] sm:max-h-[350px]"
+                data="/r-4-A.svg"
+                className="md:max-h-[650px] sm:max-h-[350px]  h-full w-full"
               >
                 Robot animation
               </object>

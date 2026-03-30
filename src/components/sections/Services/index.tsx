@@ -26,9 +26,10 @@ const Services = ({ id }: ServicesProps): JSX.Element => {
           <div className="md:col-span-2 col-span-5 relative sm:flex items-center hidden">
             <div className="min-w-full flex justify-center ">
               <object
+                aria-label="Robot - parts"
                 type="image/svg+xml"
                 data="/r-2as.svg"
-                className="md:max-h-[500px] sm:max-h-[350px]"
+                className="md:max-h-[500px] sm:max-h-[350px] h-full w-full"
               >
                 Robot parts
               </object>

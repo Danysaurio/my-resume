@@ -64,8 +64,9 @@ const DesignSkill = ({
       <a
         href={href}
         className="hover:opacity-60 transition-opacity opacity-80"
-        target="blank"
+        target="_blank" rel="noopener noreferrer"
         title={title}
+        aria-label={title}
       >
         <Icon className={className} />
       </a>

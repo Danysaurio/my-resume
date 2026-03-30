@@ -1,6 +1,6 @@
 "use client";
 import classNames from "classnames";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { navData } from ".";
 import MobileNavItem from "../NavItem/MobileNavItem";
@@ -17,7 +17,7 @@ const RenderItem = ({
 
   return (
     <li>
-      <a href={url} className={cls} title={title} target="blank">
+      <a href={url} className={cls} title={title} aria-label={title} target="_blank" rel="noopener noreferrer">
         <Icon size={25} />
       </a>
     </li>
@@ -27,10 +27,20 @@ const RenderItem = ({
 export const ResponsiveNav = ({ className }: { className?: string }) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setShowMenu(false);
+    };
+    if (showMenu) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [showMenu]);
+
   const showClasses = showMenu ? "left-[30vw]" : "left-full";
 
   const containerCls = classNames([
-    "bg-[#002345] transition-all fixed z-10 ",
+    "bg-[#002345] transition-all duration-300 ease-in-out fixed z-10",
     showClasses,
   ]);
 
@@ -41,13 +51,17 @@ export const ResponsiveNav = ({ className }: { className?: string }) => {
   return (
     <div className={className}>
       <div
-        onClick={handleOnClick}
-        className={`bg-black absolute left-0 right-0 bottom-0 top-0 z-10 opacity-50 ${
-          showMenu ? "block" : "hidden"
+        onClick={() => setShowMenu(false)}
+        className={`bg-black absolute left-0 right-0 bottom-0 top-0 z-10 transition-opacity duration-300 ${
+          showMenu ? "opacity-50" : "opacity-0 pointer-events-none"
         }`}
       ></div>
       <div className={containerCls}>
-        <button className="right-full p-2  absolute" onClick={handleOnClick}>
+        <button
+          className="right-full p-3 absolute"
+          onClick={handleOnClick}
+          aria-label={showMenu ? "Close menu" : "Open menu"}
+        >
           {showMenu ? <IoClose size={25} /> : <IoMdMenu size={25} />}
         </button>
 

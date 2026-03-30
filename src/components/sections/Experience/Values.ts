@@ -1,4 +1,4 @@
-import { GrUserWorker, GrWorkshop } from "react-icons/gr";
+import { GrWorkshop } from "react-icons/gr";
 import { MdOutlineWork, MdSchool } from "react-icons/md";
 
 export const timelineItems = [

@@ -4,7 +4,7 @@ import { socialMedia, socialMediaItem } from "../Skills/utils";
 const MediaItem = ({ title, url, icon: Icon }: socialMediaItem) => {
   return (
     <li className="pb-2">
-      <a className="flex items-center" href={url} target="blank" title={title}>
+      <a className="flex items-center" href={url} target="_blank" rel="noopener noreferrer" title={title} aria-label={title}>
         <Icon className="mr-3 opacity-70" size={25} />
         <span className="text-lg font-bold hover:text-blue-500">{title}</span>
       </a>
@@ -20,7 +20,7 @@ const Contact = ({ id }: { id: string }) => {
           <div className="col-span-5 md:col-span-3 lg:h-screen flex items-center">
             <div>
               <div className="text-center md:text-left">
-                <h2 className="kaushan text-5xl mb-9">Contact</h2>
+                <h2 className="kaushan text-3xl md:text-5xl mb-9">Contact</h2>
                 <p className="pr-0 md:pr-5 ">
                   For now, I&apos;m still working on adding more features to
                   this page. One of those is incorporating a contact form.
@@ -40,9 +40,10 @@ const Contact = ({ id }: { id: string }) => {
           <div className="col-span-5 md:col-span-2 relative sm:flex items-center hidden">
             <div className="min-w-full flex justify-center">
               <object
+                aria-label="Robot - Contact me now"
                 type="image/svg+xml"
                 data="/r-6.svg"
-                className="md:max-h-[550px] sm:max-h-[350px]"
+                className="md:max-h-[550px] sm:max-h-[350px]  h-full w-full"
               >
                 Robot - Contact me now
               </object>

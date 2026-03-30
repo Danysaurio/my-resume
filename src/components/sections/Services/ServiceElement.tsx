@@ -17,7 +17,7 @@ const ServiceElement = ({
     <div className="col-span-1">
       <div className="flex items-center mb-3 justify-center md:justify-start">
         <Image
-          className="mr-2 opacity-50"
+          className="mr-2 opacity-50 w-[30px] h-auto"
           src={imgUrl}
           alt={imgAlt}
           width={30}

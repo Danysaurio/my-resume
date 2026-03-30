@@ -1,6 +1,5 @@
 import { IconType } from "react-icons";
 import Link from "next/link";
-import React from "react";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
 
@@ -18,7 +17,7 @@ const NavItem = ({ name, path, icon: Icon }: NavItemProps): JSX.Element => {
   ]);
 
   return (
-    <Link href={path} className={cls}>
+    <Link href={path} className={cls} aria-label={name}>
       <div className="p-3">
         <Icon size={"1.2rem"} />
         <span className={titleClass}>{name}</span>

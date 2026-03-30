@@ -1,32 +1,17 @@
-import {
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiFillYoutube,
-  AiOutlineGithub,
-} from "react-icons/ai";
-
-import { IconType } from "react-icons";
 import classNames from "classnames";
-import { socialMedia } from "../Skills/utils";
-
-interface Item {
-  url: string;
-  title: string;
-  hoverClass: string;
-  icon: IconType;
-}
+import { socialMedia, socialMediaItem } from "../Skills/utils";
 
 const RenderItem = ({
   url,
   title,
   icon: Icon,
   hoverClass,
-}: Item): JSX.Element => {
-  const cls = classNames(["p-1 block", hoverClass]);
+}: socialMediaItem): JSX.Element => {
+  const cls = classNames(["p-3 block", hoverClass]);
 
   return (
     <li>
-      <a href={url} className={cls} title={title} target="blank">
+      <a href={url} className={cls} title={title} aria-label={title} target="_blank" rel="noopener noreferrer">
         <Icon size={20} />
       </a>
     </li>
@@ -35,13 +20,13 @@ const RenderItem = ({
 
 const Footer = (): JSX.Element => {
   return (
-    <div className="flex justify-center pr-3 w-full z-50 bg-blue-500 shadow-md">
+    <footer className="flex justify-center pr-3 w-full z-50 bg-blue-500 shadow-md">
       <ul className="flex">
         {socialMedia.map((el, i) => (
           <RenderItem key={"item" + i} {...el} />
         ))}
       </ul>
-    </div>
+    </footer>
   );
 };
 
