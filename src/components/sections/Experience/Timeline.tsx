@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./styles.module.scss";
 
 import TimelineItem from "./TimelineItem";
@@ -8,7 +10,7 @@ const Timeline = (): JSX.Element => {
     <>
       <ul className={styles.timeline}>
         {timelineItems.map((item, i) => (
-          <TimelineItem key={`timelineItem-${i}`} {...item} />
+          <TimelineItem key={`timelineItem-${i}`} {...item} index={i} />
         ))}
       </ul>
       <div className="mt-4 sm:block hidden">

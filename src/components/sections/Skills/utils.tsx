@@ -1,4 +1,3 @@
-import { ProgressBar } from "@/components/Utils";
 import { IconType } from "react-icons";
 import {
   AiFillInstagram,
@@ -6,7 +5,6 @@ import {
   AiFillYoutube,
   AiOutlineGithub,
 } from "react-icons/ai";
-import { BsCheck } from "react-icons/bs";
 import { FaHtml5 } from "react-icons/fa";
 
 interface devProps {
@@ -18,30 +16,22 @@ interface devProps {
 
 const DevSkill = ({
   title,
-  percentage,
   classColor,
   icon: Icon = FaHtml5,
 }: devProps): JSX.Element => {
   return (
-    <div className="grid grid-cols-5 mb-2">
-      <div className="col-span-3 flex">
-        <div className="flex items-center ">
-          <Icon className={classColor} />
-          <span className="ml-2">{title}</span>
-        </div>
-      </div>
-      <div className="col-span-2 flex items-center">
-        <ProgressBar progress={percentage} />
-      </div>
+    <div className="group flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FFF170]/30 hover:bg-white/[0.08] hover:translate-y-[-2px] transition-all duration-300">
+      <Icon className={`text-xl ${classColor}`} />
+      <span className="text-sm font-medium">{title}</span>
     </div>
   );
 };
 
 const ToolItem = ({ title }: { title: string }): JSX.Element => {
   return (
-    <li className="flex items-center">
-      <BsCheck />
-      <span className="ml-1">{title}</span>
+    <li className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FFF170]/30 hover:bg-white/[0.08] hover:translate-y-[-2px] transition-all duration-300">
+      <span className="w-1.5 h-1.5 rounded-full bg-[#FFF170]/50" />
+      <span className="text-sm">{title}</span>
     </li>
   );
 };
@@ -57,18 +47,19 @@ const DesignSkill = ({
   title,
   icon: Icon,
   href,
-  className,
 }: DesignSkillProps) => {
   return (
     <li>
       <a
         href={href}
-        className="hover:opacity-60 transition-opacity opacity-80"
-        target="_blank" rel="noopener noreferrer"
+        className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FFF170]/30 hover:bg-white/[0.08] hover:translate-y-[-2px] transition-all duration-300"
+        target="_blank"
+        rel="noopener noreferrer"
         title={title}
         aria-label={title}
       >
-        <Icon className={className} />
+        <Icon className="text-lg opacity-70" />
+        <span className="text-sm font-medium">{title}</span>
       </a>
     </li>
   );

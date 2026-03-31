@@ -1,22 +1,42 @@
 .item {
     position: relative;
-    &:hover {
-        background-color: rgba($color: #000000, $alpha: .3);
-        & :global(.title) {
-            display: block;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover .tooltip {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+        pointer-events: auto;
     }
-    
 }
 
-.title {
-    background: rgba(0, 0, 0, .3);
+.tooltip {
     position: absolute;
-    right: calc(100% + 10px);
-    top: 6px;
+    right: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 
-    padding: 4px 15px;
-    border-radius: 10px;
-    display: none;
-    text-wrap: nowrap;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 5px solid transparent;
+        border-left-color: rgba(255, 255, 255, 0.1);
+    }
 }

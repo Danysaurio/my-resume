@@ -31,6 +31,18 @@ Personal resume/portfolio website for Daniel Zavala, built as a single-page Next
 - Social media data is centralized in `src/components/sections/Skills/utils.tsx` (`socialMedia` array) — Header, Footer, Contact, and ResponsiveNav all import from there. Do not duplicate this data.
 - Semantic HTML: Header uses `<header>`, Footer uses `<footer>`, Navbar uses `<nav>`
 
+## Session Changes (2026-03-31)
+
+- Navbar migrated from right-side vertical to top fixed horizontal; hides on first screen, appears after 50px scroll; active section tracked via `IntersectionObserver`
+- `ResponsiveNav` rewritten to accept `{ showMenu, onClose }` props — state managed by `Navbar`
+- No separate `Header` component — removed from `layout.tsx`; `{children}` wrapped in `<div className="pt-14">`
+- `Banner.tsx`: `useScroll` targets section directly (no `.page` container); scroll on `body`/`window`
+- Smooth scroll: `scroll-behavior: smooth` on `html`; scroll snap: `scroll-snap-type: y mandatory` + `scroll-snap-align: proximity` on sections
+- Timeline: type-based icon colors via `getTypeStyle()` (Education=purple, Teaching=green, Work=blue) + Framer Motion stagger animations per item
+- Contact: glassmorphism cards, brand colors per platform, copy-to-clipboard email
+- Footer: 3-column layout (name | copyright | socials)
+- **Gotcha**: Never use `backdrop-filter` in `.module.scss` — crashes Next.js SCSS compiler; use Tailwind `backdrop-blur-*`
+
 ## Conventions
 
 - External links must use `target="_blank" rel="noopener noreferrer"` (never `target="blank"`)
@@ -39,3 +51,20 @@ Personal resume/portfolio website for Daniel Zavala, built as a single-page Next
 - Headings must use responsive font sizes (e.g., `text-3xl md:text-5xl`, not fixed `text-5xl`)
 - Tailwind responsive classes follow mobile-first: base → `sm:` → `md:` → `lg:` → `xl:`
 - The mobile menu (ResponsiveNav) closes on Escape key and backdrop click
+
+
+agents:
+  - name: "uiux-expert"
+    description: "Experto en diseño UI/UX moderno"
+    instructions_file: ".claude/agents/uiux-expert.md"
+    model: "sonnet"
+  
+  - name: "frontend-dev"
+    description: "Desarrollador frontend especializado"
+    instructions_file: ".claude/agents/frontend-dev.md"
+    model: "sonnet"
+  
+  - name: "team-lead"
+    description: "Team lead coordinador"
+    instructions_file: ".claude/agents/team-lead.md"
+    model: "opus"

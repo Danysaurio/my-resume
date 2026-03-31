@@ -1,23 +1,27 @@
 import "./globals.css";
 
-import { Kaushan_Script, Montserrat } from "next/font/google";
+import { Inter, Space_Grotesk, Caveat } from "next/font/google";
 
-import Header from "@/components/Header";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import classNames from "classnames";
-import { ResponsiveNav } from "@/components/Navbar/ResponsiveNav";
 
-const inter = Montserrat({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-montserrat",
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const kaushan = Kaushan_Script({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-kaushan",
-  weight: ["400"],
+  variable: "--font-space-grotesk",
+  weight: ["400", "500", "600", "700"],
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-caveat",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -85,15 +89,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cls = classNames([inter.className, kaushan.variable]);
+  const cls = classNames([inter.className, spaceGrotesk.variable, caveat.variable]);
   return (
     <html lang="en">
       <body className={cls}>
-        <main className={"page text-white md:h-screen h-[100dvh]"}>
-          <Header />
-          <ResponsiveNav className="md:hidden" />
+        <main className={"page text-white"}>
           <Navbar />
-          {children}
+          <div>
+            {children}
+          </div>
         </main>
       </body>
     </html>

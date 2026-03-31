@@ -4,7 +4,15 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
- 
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+section[id] {
+  scroll-snap-align: proximity;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,18 +34,19 @@
   }
 }
 
-.kaushan {
-  font-family: var(--font-kaushan);
+.accent-serif {
+  font-family: var(--font-caveat);
+}
+
+.display {
+  font-family: var(--font-space-grotesk);
 }
 
 body {
-  overflow: hidden;
   background-color: #002345;
 }
 
 .page {
-  overflow-y: scroll;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   scrollbar-width: thin;
   &::-webkit-scrollbar {

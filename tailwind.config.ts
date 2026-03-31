@@ -8,7 +8,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sora: [`var(--font-sora)`, 'sans-serif']
+        sora: [`var(--font-sora)`, 'sans-serif'],
+        display: [`var(--font-space-grotesk)`, 'sans-serif'],
       }
     },
     animatedSettings: {
