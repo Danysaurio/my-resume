@@ -1,1 +1,1 @@
-export { default, navData } from "./Navbar";
+export { default, navData, useNavData } from "./Navbar";

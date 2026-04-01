@@ -1,13 +1,19 @@
+"use client";
+
 import Timeline from "./Timeline";
-import { timelineItems } from "./Values";
+import { getTimeline } from "./Values";
 import { MdSchool, MdOutlineWork } from "react-icons/md";
 import { GrWorkshop } from "react-icons/gr";
-
-const workCount = timelineItems.filter(i => i.icon === MdOutlineWork).length;
-const eduCount = timelineItems.filter(i => i.icon === MdSchool).length;
-const teachCount = timelineItems.filter(i => i.icon === GrWorkshop).length;
+import { useTranslation } from "@/context/LanguageContext";
 
 const Experience = ({ id }: { id: string }): JSX.Element => {
+  const { t } = useTranslation();
+  const timelineItems = getTimeline(t);
+
+  const workCount = timelineItems.filter(i => i.icon === MdOutlineWork).length;
+  const eduCount = timelineItems.filter(i => i.icon === MdSchool).length;
+  const teachCount = timelineItems.filter(i => i.icon === GrWorkshop).length;
+
   return (
     <section id={id} className="flex items-center min-h-screen py-16 sm:py-20">
       <div className="container mx-auto">
@@ -16,25 +22,25 @@ const Experience = ({ id }: { id: string }): JSX.Element => {
             {/* Heading */}
             <section className="mb-8 text-center md:text-left">
               <h2 className="accent-serif text-3xl md:text-5xl mb-2">
-                Experience
+                {t("experience.heading")}
               </h2>
               <p className="text-gray-400 text-sm md:text-base mb-5">
-                My path from design student to senior engineer.
+                {t("experience.tagline")}
               </p>
 
               {/* Stats row */}
               <div className="flex gap-4 justify-center md:justify-start flex-wrap">
                 <div className="flex items-center gap-2 text-sm">
                   <span className="w-2 h-2 rounded-full bg-blue-400" />
-                  <span className="text-gray-400">{workCount} roles</span>
+                  <span className="text-gray-400">{workCount} {t("experience.types.Work").toLowerCase()}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="w-2 h-2 rounded-full bg-purple-400" />
-                  <span className="text-gray-400">{eduCount} education</span>
+                  <span className="text-gray-400">{eduCount} {t("experience.types.Education").toLowerCase()}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="w-2 h-2 rounded-full bg-green-400" />
-                  <span className="text-gray-400">{teachCount} teaching</span>
+                  <span className="text-gray-400">{teachCount} {t("experience.types.Teaching").toLowerCase()}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="text-[#FFF170]/60">~10 years</span>

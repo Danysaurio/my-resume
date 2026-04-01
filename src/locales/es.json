@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "services": "Servicios",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "hire": "Contrátame"
+  },
+  "banner": {
+    "typing": ["Ingeniero UI", "Desarrollador", "Diseñador", "Frontend", "UX/UI"],
+    "aboutBtn": "Sobre mí",
+    "contactBtn": "Contáctame"
+  },
+  "about": {
+    "badge": "Desarrollador de Software & Diseñador",
+    "heading": "Hola, soy Daniel Zavala",
+    "paragraph": "Combino habilidades técnicas con visión creativa para construir interfaces que se ven increíbles y funcionan aún mejor. Apasionado por crear experiencias digitales desde el concepto hasta el código.",
+    "metrics": [
+      { "value": "5+", "label": "Años de exp." },
+      { "value": "+30%", "label": "Engagement" },
+      { "value": "10+", "label": "Tecnologías" },
+      { "value": "3", "label": "Empresas" }
+    ],
+    "highlights": [
+      { "title": "Base en Diseño", "desc": "Estudié diseño gráfico, animación y web — veo la UI con ojos de diseñador." },
+      { "title": "Orientado al Rendimiento", "desc": "Mejoré el rendimiento un 50% y el engagement un 30% en FreeAgent." },
+      { "title": "Liderazgo de Equipos", "desc": "Lideré equipos frontend y mentoreé devs — incluso enseñé JavaScript en universidad." },
+      { "title": "Bilingüe", "desc": "Fluido en inglés y español — cómodo en equipos internacionales." }
+    ]
+  },
+  "services": {
+    "heading": "Qué hago",
+    "tagline": "Creando experiencias digitales desde el concepto hasta el código.",
+    "items": [
+      {
+        "title": "Desarrollo",
+        "text": "Impulso proyectos usando herramientas de vanguardia para crear interfaces web dinámicas y altamente responsivas. Me especializo en construir experiencias de usuario excepcionales, enfocándome en la usabilidad y el rendimiento óptimo."
+      },
+      {
+        "title": "Diseño web responsivo",
+        "text": "Me especializo en diseño web responsivo, asegurando que los sitios web se adapten perfectamente a distintos dispositivos y tamaños de pantalla. Mi enfoque es crear interfaces de usuario intuitivas y visualmente atractivas que ofrezcan una experiencia óptima en todas las plataformas."
+      },
+      {
+        "title": "Diseño de interfaces",
+        "text": "Sobresalgo en el diseño de interfaces de usuario, creando interfaces visualmente impresionantes e intuitivas que cautivan a los usuarios. Mis diseños priorizan la experiencia del usuario, garantizando facilidad de navegación e interacción."
+      },
+      {
+        "title": "Diseño de experiencias",
+        "text": "Mi experiencia se extiende al diseño de experiencias, donde creo experiencias digitales inmersivas y atractivas. Combinando investigación de usuarios, prototipado y pruebas."
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Habilidades",
+    "tagline": "Tecnologías y herramientas con las que trabajo diariamente.",
+    "devLabel": "Desarrollo",
+    "designLabel": "Diseño",
+    "toolsLabel": "Herramientas y flujo"
+  },
+  "experience": {
+    "heading": "Experiencia",
+    "tagline": "Mi camino desde estudiante de diseño hasta ingeniero senior.",
+    "types": {
+      "Education": "Educación",
+      "Teaching": "Docencia",
+      "Work": "Trabajo"
+    },
+    "continued": "...Continuará",
+    "items": [
+      {
+        "date": "2013 - 2018",
+        "type": "Education",
+        "position": "Estudiante",
+        "title": "UNISITE",
+        "text": "Como estudiante de Diseño, Animación y Web, adquirí habilidades en diseño gráfico, animación y desarrollo web. Participando en proyectos colaborativos, apliqué mis conocimientos en entornos prácticos. Demostrando capacidad para captar conceptos, resolver problemas creativamente y adaptarme rápidamente a nuevas tecnologías, espero aplicar estas habilidades en futuras oportunidades profesionales."
+      },
+      {
+        "date": "2015 - 2016",
+        "type": "Work",
+        "position": "Diseñador Web",
+        "title": "ArtWeb",
+        "text": "Después de pasar un par de años estudiando diseño, decidí que era hora de aplicar mis conocimientos en un entorno laboral. Afortunadamente, encontré un puesto donde diseñaban y programaban sitios web. Allí aprendí a diseñar desde páginas estáticas hasta plataformas de e-commerce. Además, descubrí el mundo de la programación, dándome cuenta de que podía fusionar mis conocimientos de diseño con el código."
+      },
+      {
+        "date": "2015 - Presente",
+        "type": "Education",
+        "position": "Estudiante",
+        "title": "YouTube, Platzi, Acamica, Frontend Masters, Domestika, etc...",
+        "text": "Mientras trabajaba en Artweb, comencé a sumergirme en la programación frontend estudiando todo lo que podía encontrar en línea. Me inscribí en cursos en plataformas como YouTube, Platzi, Acamica, Frontend Masters, Domestika y más. A través de estos cursos, aprendí a traducir mi creatividad en código, ampliando mis habilidades y mejorando mis capacidades como desarrollador frontend."
+      },
+      {
+        "date": "Ene 2016 - Jun 2016",
+        "type": "Education",
+        "position": "Estudiante",
+        "title": "Curso de Java",
+        "text": "Durante mi investigación sobre programación, me topé con un curso de Java en una universidad. El curso duró seis meses, durante los cuales obtuve valiosas perspectivas sobre la mentalidad de ingeniería. Comencé a aplicar este nuevo conocimiento en mis trabajos posteriores, enriqueciendo mi enfoque para la resolución de problemas y el desarrollo de proyectos."
+      },
+      {
+        "date": "2016 - 2019",
+        "type": "Work",
+        "position": "Diseñador Web, Frontend, Team Lead",
+        "title": "Neubox",
+        "text": "Un día, Neubox necesitaba un rediseño completo de su sitio web, así que me contrataron como diseñador y desarrollador frontend. En Neubox, me adentré en el diseño UX y UI, realizando pruebas de experiencia de usuario y renovando toda la imagen de la marca. Más tarde, fui designado líder de equipo para un proyecto interno de desarrollo de una aplicación de construcción de sitios web sin código. En Neubox perfeccioné mis habilidades de liderazgo, guiando eficientemente al equipo hacia el éxito del proyecto."
+      },
+      {
+        "date": "Ene 2018 - Jul 2018",
+        "type": "Teaching",
+        "position": "Docente",
+        "title": "Instituto superior en tecnologías de la información.",
+        "text": "Para fortalecer mis habilidades de desarrollo, decidí enseñar programación en una universidad. Como profesor, dominé el arte de enseñar y guiar a un grupo completo de personas desde no saber nada de JavaScript hasta crear y alojar su propia página web. Esta experiencia no solo consolidó mi comprensión de la programación, sino que también mejoró mi capacidad para transmitir conceptos complejos de manera efectiva."
+      },
+      {
+        "date": "2019 - 2021",
+        "type": "Work",
+        "position": "Ingeniero UI",
+        "title": "FreeAgent",
+        "text": "Una vez que mi dominio del inglés alcanzó un nivel suficiente, apliqué para un puesto de Ingeniero UI en una startup en EE.UU. Afortunadamente, conseguí el puesto. Al comenzar a trabajar en la aplicación, me encontré con un desastre de UI. Aprovechando mi conocimiento acumulado a lo largo de los años, transformé la aplicación, resultando en una interfaz visualmente impresionante. Además, el engagement de los usuarios aumentó un 30% y el rendimiento mejoró un 50%. Mi experiencia en Freeagent fue extraordinaria y mejoró enormemente mis habilidades de comunicación en inglés."
+      },
+      {
+        "date": "2021 - Presente",
+        "type": "Work",
+        "position": "Ingeniero de Software Senior",
+        "title": "EPAM",
+        "text": "En Epam, me encontré con un nuevo desafío trabajando junto a ingenieros de alto nivel. Cada día me adentro más en la programación y perfecciono mis habilidades de liderazgo mientras guío un equipo. Este entorno impulsa mi aprendizaje continuo, permitiéndome expandir mi base de conocimientos y crecer tanto personal como profesionalmente."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Disponible para trabajar",
+    "heading": "Trabajemos juntos",
+    "tagline": "¿Tienes un proyecto en mente o simplemente quieres saludar? Escríbeme y te responderé lo antes posible.",
+    "reachLabel": "Contáctame directamente",
+    "findLabel": "Encuéntrame en",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "footerNote": "Basado en México · Disponible para trabajo remoto mundial · Suelo responder en menos de 24h"
+  },
+  "footer": {
+    "copyright": "© {year} · Construido con Next.js & Tailwind CSS"
+  }
+}

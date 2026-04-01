@@ -14,6 +14,7 @@ import { ResponsiveNav } from "./ResponsiveNav";
 import { useState, useEffect } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import { useTranslation } from "@/context/LanguageContext";
 
 interface NavItem {
   name: string;
@@ -21,19 +22,40 @@ interface NavItem {
   icon: IconType;
 }
 
-export const navData: NavItem[] = [
-  { name: "Home", path: "#home", icon: HiHome },
-  { name: "About", path: "#about", icon: HiUser },
-  { name: "Services", path: "#services", icon: HiRectangleGroup },
-  { name: "Skills", path: "#skills", icon: HiViewColumns },
-  { name: "Experience", path: "#experience", icon: HiChatBubbleBottomCenterText },
-  { name: "Contact", path: "#contact", icon: HiEnvelope },
+const navIcons: { path: string; icon: IconType }[] = [
+  { path: "#home", icon: HiHome },
+  { path: "#about", icon: HiUser },
+  { path: "#services", icon: HiRectangleGroup },
+  { path: "#skills", icon: HiViewColumns },
+  { path: "#experience", icon: HiChatBubbleBottomCenterText },
+  { path: "#contact", icon: HiEnvelope },
 ];
+
+const navKeys = ["home", "about", "services", "skills", "experience", "contact"] as const;
+
+export const useNavData = (): NavItem[] => {
+  const { t } = useTranslation();
+  return navIcons.map((item, i) => ({
+    name: t(`nav.${navKeys[i]}`),
+    path: item.path,
+    icon: item.icon,
+  }));
+};
+
+// Static navData for use in ResponsiveNav (gets translated names via useNavData hook)
+export const navData: NavItem[] = navIcons.map((item, i) => ({
+  name: navKeys[i],
+  path: item.path,
+  icon: item.icon,
+}));
 
 const Navbar = (): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const { lang, setLang, t } = useTranslation();
+
+  const navItems = useNavData();
 
   // Scroll-depth listener: increase bg opacity past 50px
   useEffect(() => {
@@ -45,7 +67,7 @@ const Navbar = (): JSX.Element => {
 
   // Active section tracking via IntersectionObserver
   useEffect(() => {
-    const sectionIds = navData.map(({ path }) => path.replace("#", ""));
+    const sectionIds = navIcons.map(({ path }) => path.replace("#", ""));
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -97,11 +119,11 @@ const Navbar = (): JSX.Element => {
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-1">
-          {navData.map(({ name, path }) => {
+          {navItems.map(({ name, path }) => {
             const sectionId = path.replace("#", "");
             const isActive = activeSection === sectionId;
             return (
-              <li key={name}>
+              <li key={path}>
                 <Link
                   href={path}
                   className={`relative flex flex-col items-center px-4 py-2 rounded-lg text-sm transition-all duration-200 capitalize ${
@@ -126,12 +148,27 @@ const Navbar = (): JSX.Element => {
 
         {/* Right-side actions */}
         <div className="flex items-center gap-2">
+          {/* Language toggle */}
+          <div className="flex items-center gap-1 text-sm font-medium">
+            <button
+              onClick={() => setLang("en")}
+              aria-label="Switch to English"
+              className={lang === "en" ? "text-blue-400 font-bold" : "text-gray-400 hover:text-white"}
+            >EN</button>
+            <span className="text-gray-500">/</span>
+            <button
+              onClick={() => setLang("es")}
+              aria-label="Switch to Spanish"
+              className={lang === "es" ? "text-blue-400 font-bold" : "text-gray-400 hover:text-white"}
+            >ES</button>
+          </div>
+
           {/* Hire Me CTA — visible on all sizes */}
           <Link
             href="#contact"
             className="px-4 py-1.5 rounded-full text-xs font-semibold bg-[#FFF170] text-[#020c1f] hover:bg-[#FFF170]/90 transition-all duration-200 whitespace-nowrap"
           >
-            Hire Me
+            {t("nav.hire")}
           </Link>
 
           {/* Mobile hamburger */}

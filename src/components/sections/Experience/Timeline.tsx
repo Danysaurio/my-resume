@@ -3,9 +3,13 @@
 import styles from "./styles.module.scss";
 
 import TimelineItem from "./TimelineItem";
-import { timelineItems } from "./Values";
+import { getTimeline } from "./Values";
+import { useTranslation } from "@/context/LanguageContext";
 
 const Timeline = (): JSX.Element => {
+  const { t } = useTranslation();
+  const timelineItems = getTimeline(t);
+
   return (
     <>
       <ul className={styles.timeline}>
@@ -14,7 +18,7 @@ const Timeline = (): JSX.Element => {
         ))}
       </ul>
       <div className="mt-4 sm:block hidden">
-        <span className="text-blue-500">...To be continued</span>
+        <span className="text-blue-500">{t("experience.continued")}</span>
       </div>
     </>
   );

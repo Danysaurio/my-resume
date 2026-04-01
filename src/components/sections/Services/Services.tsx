@@ -1,12 +1,17 @@
-import ServiceElement from "./ServiceElement";
+"use client";
 
-import { servicesElements } from "./Values";
+import ServiceElement from "./ServiceElement";
+import { getServices } from "./Values";
+import { useTranslation } from "@/context/LanguageContext";
 
 interface ServicesProps {
   id: string;
 }
 
 const Services = ({ id }: ServicesProps): JSX.Element => {
+  const { t } = useTranslation();
+  const servicesElements = getServices(t);
+
   return (
     <section id={id} className="flex items-center bg-[#001c39] py-10">
       <div className="container mx-auto">
@@ -14,10 +19,10 @@ const Services = ({ id }: ServicesProps): JSX.Element => {
           <div className="md:col-span-3 col-span-5 lg:h-screen md:h-auto flex items-center">
             <div className="text-center md:text-left px-5 sm:py-0">
               <h2 className="accent-serif lg:text-5xl md:text-5xl text-3xl mb-2">
-                What I do
+                {t("services.heading")}
               </h2>
               <p className="text-gray-400 mb-10 text-sm md:text-base">
-                Crafting digital experiences from concept to code.
+                {t("services.tagline")}
               </p>
               <div className="grid md:grid-cols-2 gap-5 grid-cols-1">
                 {servicesElements.map((el, i) => (

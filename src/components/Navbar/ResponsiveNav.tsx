@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { navData } from ".";
+import { useNavData } from ".";
 import MobileNavItem from "../NavItem/MobileNavItem";
 import { socialMedia, socialMediaItem } from "../sections/Skills/utils";
 
@@ -26,6 +26,8 @@ interface ResponsiveNavProps {
 }
 
 export const ResponsiveNav = ({ showMenu, onClose }: ResponsiveNavProps) => {
+  const navItems = useNavData();
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -51,7 +53,7 @@ export const ResponsiveNav = ({ showMenu, onClose }: ResponsiveNavProps) => {
         }`}
       >
         <ul className="pt-4">
-          {navData.map((el, i) => (
+          {navItems.map((el, i) => (
             <MobileNavItem key={"nav" + i} onClick={onClose} {...el} />
           ))}
         </ul>

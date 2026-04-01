@@ -1,11 +1,16 @@
+"use client";
+
 import { BsPaintBucket } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
 import { LiaToolsSolid } from "react-icons/lia";
 
 import { designSkills, devSkills, tools } from "./allSkills";
 import { DesignSkill, DevSkill, ToolItem } from "./utils";
+import { useTranslation } from "@/context/LanguageContext";
 
 const Skills = ({ id }: { id: string }): JSX.Element => {
+  const { t } = useTranslation();
+
   return (
     <section id={id} className="flex items-center bg-[#00000021] lg:h-screen min-h-screen py-16 sm:py-20 overflow-hidden">
       <div className="container mx-auto">
@@ -13,10 +18,10 @@ const Skills = ({ id }: { id: string }): JSX.Element => {
           <div className="col-span-5 md:col-span-3">
             <div className="w-full px-5 sm:px-0">
               <h2 className="accent-serif lg:text-5xl md:text-5xl text-3xl mb-2 text-center md:text-left">
-                Skills
+                {t("skills.heading")}
               </h2>
               <p className="text-gray-400 mb-10 text-sm md:text-base text-center md:text-left">
-                Technologies and tools I work with daily.
+                {t("skills.tagline")}
               </p>
 
               {/* Web Development */}
@@ -24,7 +29,7 @@ const Skills = ({ id }: { id: string }): JSX.Element => {
                 <div className="flex items-center gap-2 mb-4">
                   <FaCode className="text-[#FFF170]/50" />
                   <h3 className="text-base font-semibold uppercase tracking-wider text-gray-300">
-                    Development
+                    {t("skills.devLabel")}
                   </h3>
                 </div>
                 <div className="flex flex-wrap gap-3">
@@ -39,7 +44,7 @@ const Skills = ({ id }: { id: string }): JSX.Element => {
                 <div className="flex items-center gap-2 mb-4">
                   <BsPaintBucket className="text-[#FFF170]/50" />
                   <h3 className="text-base font-semibold uppercase tracking-wider text-gray-300">
-                    Design
+                    {t("skills.designLabel")}
                   </h3>
                 </div>
                 <ul className="flex flex-wrap gap-3">
@@ -54,7 +59,7 @@ const Skills = ({ id }: { id: string }): JSX.Element => {
                 <div className="flex items-center gap-2 mb-4">
                   <LiaToolsSolid className="text-[#FFF170]/50" />
                   <h3 className="text-base font-semibold uppercase tracking-wider text-gray-300">
-                    Tools & Workflow
+                    {t("skills.toolsLabel")}
                   </h3>
                 </div>
                 <ul className="flex flex-wrap gap-3">

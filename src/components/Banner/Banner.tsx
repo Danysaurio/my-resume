@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import styles from "./styles.module.scss";
 import Typing from "./Typing";
+import { useTranslation } from "@/context/LanguageContext";
 
 const Banner = (): JSX.Element => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -13,6 +14,7 @@ const Banner = (): JSX.Element => {
     target: sectionRef,
     offset: ["start start", "end start"],
   });
+  const { t } = useTranslation();
 
   const bgY = useTransform(scrollYProgress, [0, 1], [0, -80]);
   const textY = useTransform(scrollYProgress, [0, 1], [0, 350]);
@@ -45,9 +47,6 @@ const Banner = (): JSX.Element => {
         style={{ y: textY, opacity: textOpacity }}
       >
         <h1 className={titleCls}>Daniel Zavala</h1>
-        {/* <p className="text-sm sm:text-base md:text-lg tracking-[0.25em] uppercase text-gray-300 mt-2 mb-4">
-          Senior Software Engineer
-        </p> */}
         <h2 className={subTitleCls}>
           I&apos;m&nbsp;
           <b className={styles.subTitleBold}>
@@ -59,13 +58,13 @@ const Banner = (): JSX.Element => {
             href="#about"
             className={styles.ctaPrimary}
           >
-            About Me
+            {t("banner.aboutBtn")}
           </a>
           <a
             href="#contact"
             className={styles.ctaSecondary}
           >
-            Get in Touch
+            {t("banner.contactBtn")}
           </a>
         </div>
       </motion.div>

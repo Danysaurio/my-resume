@@ -1,9 +1,11 @@
 "use client";
 
 import { ReactTyped } from "react-typed";
-const textLines = ["UI Engineer", "Developer", "Designer", "Front end", "UX/UI"];
+import { useTranslation } from "@/context/LanguageContext";
 
 const Typing = () => {
+  const { t } = useTranslation();
+  const textLines: string[] = t("banner.typing");
   return <ReactTyped backSpeed={80} loop strings={textLines} typeSpeed={80} />;
 };
 

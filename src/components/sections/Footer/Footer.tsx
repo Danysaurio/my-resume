@@ -1,4 +1,7 @@
+"use client";
+
 import { socialMedia, socialMediaItem } from "../Skills/utils";
+import { useTranslation } from "@/context/LanguageContext";
 
 const iconColorMap: Record<string, string> = {
   Youtube: "hover:text-[#FF0000]",
@@ -26,6 +29,9 @@ const SocialIcon = ({ url, title, icon: Icon }: socialMediaItem): JSX.Element =>
 };
 
 const Footer = (): JSX.Element => {
+  const { t } = useTranslation();
+  const copyright = t("footer.copyright").replace("{year}", new Date().getFullYear().toString());
+
   return (
     <footer className="border-t border-white/5 bg-[#020c1f]/80 backdrop-blur-sm">
       <div className="container mx-auto px-5 sm:px-0 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -36,7 +42,7 @@ const Footer = (): JSX.Element => {
 
         {/* Center: copyright */}
         <p className="text-xs text-gray-600 order-last sm:order-none">
-          © {new Date().getFullYear()} · Built with Next.js & Tailwind CSS
+          {copyright}
         </p>
 
         {/* Right: social icons */}
