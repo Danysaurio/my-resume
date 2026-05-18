@@ -6,7 +6,7 @@ export const ProgressBar = ({
 }: {
   progress: number;
   classColor?: string;
-}): JSX.Element => {
+}) => {
   const cls = classNames(["py-1.5 text-center", classColor]);
 
   return (

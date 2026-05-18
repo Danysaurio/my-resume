@@ -53,7 +53,7 @@ const TimelineItem = ({
   text,
   title,
   index = 0,
-}: TimelineItemProps): JSX.Element => {
+}: TimelineItemProps) => {
   const [expanded, setExpanded] = useState(false);
   const typeStyle = getTypeStyle(Icon);
 

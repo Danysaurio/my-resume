@@ -7,7 +7,7 @@ const iconColorMap: Record<string, string> = {
   Linkedin: "hover:text-[#0073b1]",
 };
 
-const SocialIcon = ({ url, title, icon: Icon }: socialMediaItem): JSX.Element => {
+const SocialIcon = ({ url, title, icon: Icon }: socialMediaItem) => {
   const colorCls = iconColorMap[title] ?? "hover:text-[#FFF170]";
   return (
     <li>
@@ -25,7 +25,7 @@ const SocialIcon = ({ url, title, icon: Icon }: socialMediaItem): JSX.Element =>
   );
 };
 
-const Footer = (): JSX.Element => {
+const Footer = () => {
   return (
     <footer className="border-t border-white/5 bg-[#020c1f]/80 backdrop-blur-sm">
       <div className="container mx-auto px-5 sm:px-0 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">

@@ -5,7 +5,7 @@ import { LiaToolsSolid } from "react-icons/lia";
 import { designSkills, devSkills, tools } from "./allSkills";
 import { DesignSkill, DevSkill, ToolItem } from "./utils";
 
-const Skills = ({ id }: { id: string }): JSX.Element => {
+const Skills = ({ id }: { id: string }) => {
   return (
     <section id={id} className="flex items-center bg-[#00000021] lg:h-screen min-h-screen py-16 sm:py-20 overflow-hidden">
       <div className="container mx-auto">

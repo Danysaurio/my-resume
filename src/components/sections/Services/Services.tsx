@@ -6,7 +6,7 @@ interface ServicesProps {
   id: string;
 }
 
-const Services = ({ id }: ServicesProps): JSX.Element => {
+const Services = ({ id }: ServicesProps) => {
   return (
     <section id={id} className="flex items-center bg-[#001c39] py-10">
       <div className="container mx-auto">

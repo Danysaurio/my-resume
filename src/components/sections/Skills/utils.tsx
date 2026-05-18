@@ -18,7 +18,7 @@ const DevSkill = ({
   title,
   classColor,
   icon: Icon = FaHtml5,
-}: devProps): JSX.Element => {
+}: devProps) => {
   return (
     <div className="group flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FFF170]/30 hover:bg-white/[0.08] hover:translate-y-[-2px] transition-all duration-300">
       <Icon className={`text-xl ${classColor}`} />
@@ -27,7 +27,7 @@ const DevSkill = ({
   );
 };
 
-const ToolItem = ({ title }: { title: string }): JSX.Element => {
+const ToolItem = ({ title }: { title: string }) => {
   return (
     <li className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-[#FFF170]/30 hover:bg-white/[0.08] hover:translate-y-[-2px] transition-all duration-300">
       <span className="w-1.5 h-1.5 rounded-full bg-[#FFF170]/50" />

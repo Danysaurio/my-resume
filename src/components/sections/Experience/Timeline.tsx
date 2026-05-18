@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 import TimelineItem from "./TimelineItem";
 import { timelineItems } from "./Values";
 
-const Timeline = (): JSX.Element => {
+const Timeline = () => {
   return (
     <>
       <ul className={styles.timeline}>

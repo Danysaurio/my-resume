@@ -30,7 +30,7 @@ export const navData: NavItem[] = [
   { name: "Contact", path: "#contact", icon: HiEnvelope },
 ];
 
-const Navbar = (): JSX.Element => {
+const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);

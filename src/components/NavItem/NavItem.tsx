@@ -8,7 +8,7 @@ export interface NavItemProps {
   icon: IconType;
 }
 
-const NavItem = ({ name, path, icon: Icon }: NavItemProps): JSX.Element => {
+const NavItem = ({ name, path, icon: Icon }: NavItemProps) => {
   return (
     <Link
       href={path}

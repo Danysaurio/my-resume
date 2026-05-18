@@ -7,7 +7,7 @@ const workCount = timelineItems.filter(i => i.icon === MdOutlineWork).length;
 const eduCount = timelineItems.filter(i => i.icon === MdSchool).length;
 const teachCount = timelineItems.filter(i => i.icon === GrWorkshop).length;
 
-const Experience = ({ id }: { id: string }): JSX.Element => {
+const Experience = ({ id }: { id: string }) => {
   return (
     <section id={id} className="flex items-center min-h-screen py-16 sm:py-20">
       <div className="container mx-auto">

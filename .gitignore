@@ -40,5 +40,4 @@ next-env.d.ts
 # playwright screenshots
 .playwright-mcp/
 
-# firebase
-.firebase/
+plan/

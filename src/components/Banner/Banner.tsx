@@ -7,7 +7,7 @@ import { useRef } from "react";
 import styles from "./styles.module.scss";
 import Typing from "./Typing";
 
-const Banner = (): JSX.Element => {
+const Banner = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,

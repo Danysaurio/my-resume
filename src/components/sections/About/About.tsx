@@ -48,7 +48,7 @@ const highlights: Highlight[] = [
   },
 ];
 
-const About = ({ id }: AboutProps): JSX.Element => {
+const About = ({ id }: AboutProps) => {
   return (
     <section id={id} className="flex items-center min-h-screen py-10 sm:py-20">
       <div className="container mx-auto">

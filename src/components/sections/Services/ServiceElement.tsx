@@ -14,7 +14,7 @@ const ServiceElement = ({
   title,
   text,
   index = 0,
-}: ServiceItem): JSX.Element => {
+}: ServiceItem) => {
   const num = String(index + 1).padStart(2, "0");
 
   return (
