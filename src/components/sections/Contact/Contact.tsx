@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { HiMail, HiClipboardCopy, HiCheck } from "react-icons/hi";
 import { useState } from "react";
 import { socialMedia, socialMediaItem } from "../Skills/utils";
+import { useTranslation } from "@/context/LanguageContext";
 
 const CONTACT_EMAIL = "danyzavala@gmail.com";
 
@@ -87,6 +88,7 @@ const SocialCard = ({ title, url, icon: Icon }: socialMediaItem) => {
 
 const EmailBlock = () => {
   const [copied, setCopied] = useState(false);
+  const { t } = useTranslation();
 
   const handleCopy = async () => {
     try {
@@ -124,12 +126,12 @@ const EmailBlock = () => {
         {copied ? (
           <>
             <HiCheck className="text-base" />
-            <span>Copied</span>
+            <span>{t("contact.copied")}</span>
           </>
         ) : (
           <>
             <HiClipboardCopy className="text-base" />
-            <span>Copy</span>
+            <span>{t("contact.copy")}</span>
           </>
         )}
       </button>
@@ -138,6 +140,8 @@ const EmailBlock = () => {
 };
 
 const Contact = ({ id }: { id: string }) => {
+  const { t } = useTranslation();
+
   return (
     <section
       id={id}
@@ -156,7 +160,7 @@ const Contact = ({ id }: { id: string }) => {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium tracking-wide uppercase bg-[#FFF170]/10 text-[#FFF170] border border-[#FFF170]/20 mb-5">
-                Available for work
+                {t("contact.badge")}
               </span>
             </motion.div>
 
@@ -169,7 +173,7 @@ const Contact = ({ id }: { id: string }) => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.05 }}
             >
-              Let&apos;s work together
+              {t("contact.heading")}
             </motion.h2>
 
             {/* Tagline */}
@@ -181,8 +185,7 @@ const Contact = ({ id }: { id: string }) => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Have a project in mind or just want to say hello? Drop me a line
-              and I&apos;ll get back to you as soon as possible.
+              {t("contact.tagline")}
             </motion.p>
 
             {/* Email block */}
@@ -195,7 +198,7 @@ const Contact = ({ id }: { id: string }) => {
               transition={{ duration: 0.5, delay: 0.15 }}
             >
               <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-3">
-                Reach me directly
+                {t("contact.reachLabel")}
               </p>
               <EmailBlock />
             </motion.div>
@@ -209,7 +212,7 @@ const Contact = ({ id }: { id: string }) => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-3">
-                Find me on
+                {t("contact.findLabel")}
               </p>
             </motion.div>
 
@@ -238,7 +241,7 @@ const Contact = ({ id }: { id: string }) => {
               transition={{ duration: 0.5, delay: 0.55 }}
             >
               <p className="text-xs text-gray-600 leading-relaxed max-w-sm">
-                Based in Mexico · Available for remote work worldwide · Typically responds within 24h
+                {t("contact.footerNote")}
               </p>
             </motion.div>
           </div>

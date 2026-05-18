@@ -5,6 +5,7 @@ import { Inter, Space_Grotesk, Caveat } from "next/font/google";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import classNames from "classnames";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -94,10 +95,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={cls}>
         <main className={"page text-white"}>
-          <Navbar />
-          <div>
-            {children}
-          </div>
+          <LanguageProvider>
+            <Navbar />
+            <div>
+              {children}
+            </div>
+          </LanguageProvider>
         </main>
       </body>
     </html>
