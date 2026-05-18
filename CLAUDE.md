@@ -4,18 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal resume/portfolio website for Daniel Zavala, built as a single-page Next.js application deployed to Firebase Hosting.
+Personal resume/portfolio website for Daniel Zavala, built as a single-page Next.js application deployed to Vercel.
 
 ## Commands
 
 - `npm run dev` — start dev server (localhost:3000)
-- `npm run build` — static export build (outputs to `out/`)
+- `npm run build` — production build
 - `npm run lint` — run ESLint
-- `firebase deploy` — deploy to Firebase Hosting (project: my-cv-511f4)
+- `vercel --prod` — deploy to Vercel production
 
 ## Architecture
 
-- **Next.js 14** with App Router, configured for **static export** (`output: "export"` in next.config.mjs)
+- **Next.js 16** with App Router, deployed natively on Vercel (no static export config needed)
 - **Single page app**: `src/app/page.tsx` renders all sections in order: Banner → About → Services → Skills → Experience → Contact → Footer
 - **Styling**: Tailwind CSS + SCSS Modules (component-level `.module.scss` files). Fonts: Montserrat (body) and Kaushan Script (accent), loaded via `next/font/google`
 - **Animations**: react-typed for typing effects, tailwindcss-animatecss plugin (only `fadeInRight` used in NavItem)

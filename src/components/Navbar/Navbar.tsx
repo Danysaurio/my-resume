@@ -109,10 +109,8 @@ const Navbar = () => {
           className="flex items-center gap-2 group"
         >
           {/* "DZ" badge — visible on all sizes, complements the full name on md+ */}
-          <span className="flex items-center justify-center w-7 h-7 rounded-md bg-[#FFF170] text-[#020c1f] text-xs font-extrabold tracking-tight select-none shrink-0">
-            DZ
-          </span>
-          <span className="accent-serif text-xl text-white/80 group-hover:text-white transition-colors duration-200 hidden sm:block">
+          <img src="/head.svg" alt="DZ" className="w-7 h-7 shrink-0 select-none" />
+          <span className=" text-xl text-white/80 group-hover:text-white transition-colors duration-200 hidden sm:block">
             Daniel Zavala
           </span>
         </Link>
